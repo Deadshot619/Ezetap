@@ -3,4 +3,5 @@
 
     <string name="text_form">Form</string>
     <string name="text_form_data">Form Data</string>
+    <string name="text_label">%s :</string>
 </resources>

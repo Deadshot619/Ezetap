@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="data"
             type="com.example.ezetap.model.domain.UiData" />
@@ -18,28 +19,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="@dimen/margin_normal"/>
+            app:layout_constraintGuide_begin="@dimen/margin_normal" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_end="@dimen/margin_normal"/>
+            app:layout_constraintGuide_end="@dimen/margin_normal" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="@dimen/margin_normal"/>
+            app:layout_constraintGuide_begin="@dimen/margin_normal" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="@dimen/margin_normal"/>
+            app:layout_constraintGuide_end="@dimen/margin_normal" />
 
         <!--Title-->
         <TextView
@@ -51,10 +52,11 @@
             android:maxLines="2"
             android:textColor="@color/dark_grey"
             android:textSize="@dimen/text_size_normal"
-            android:text="@{data.value}"
+            app:labelText="@{data.value}"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
             app:layout_constraintTop_toTopOf="@id/guideline_top"
-            app:layout_constraintEnd_toEndOf="@id/guideline_end"
             tools:text="Your Phone" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

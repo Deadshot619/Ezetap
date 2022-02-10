@@ -1,9 +1,11 @@
 package com.example.ezetap.utils
 
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
+import com.example.ezetap.R
 
 @BindingAdapter("imgUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?){
@@ -13,4 +15,9 @@ fun bindImage(imgView: ImageView, imgUrl: String?){
             .load(imgUri)
             .into(imgView)
     }
+}
+
+@BindingAdapter("labelText")
+fun bindLabelText(textView: TextView, text: String){
+    textView.text = String.format(textView.context.getString(R.string.text_label), text.trim())
 }
